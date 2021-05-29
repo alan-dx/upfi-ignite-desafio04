@@ -32,7 +32,7 @@ export function CardList({ cards }: CardsProps): JSX.Element {
     <>
       {/* TODO CARD GRID */}
       <SimpleGrid columns={3} spacing={40}>
-        {cards.map(card => <Card data={card} viewImage={handleViewImage} /> )}
+        {cards.map(card => <Card key={card.id} data={card} viewImage={handleViewImage} /> )}
       </SimpleGrid>
 
       {/* TODO MODALVIEWIMAGE */}
