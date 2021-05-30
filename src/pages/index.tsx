@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
     'images',
     // TODO AXIOS REQUEST WITH PARAM
     async ({ pageParam = null }) => {
-       const response = await api.get('/images', {
+       const response = await api.get('/api/images', {
         params: {
           after: pageParam
         }
@@ -77,11 +77,12 @@ export default function Home(): JSX.Element {
           loadingText="Carregando..."
           isDisabled={!hasNextPage}
           onClick={() => fetchNextPage()}
+          role="button"
           w="134px"
           h="40px"
           py={6}
         >
-          Carregar Mais
+          Carregar mais
         </Button>
         }
       </Box>
